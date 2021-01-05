@@ -25,7 +25,12 @@ header .logo,
 }
 
 .container.header {
+  position: relative;
   text-align: left;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
 }
 .logo {
   font-family: $logo-font-family;
@@ -51,14 +56,94 @@ a {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: inherit;
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: $title-text-color2;
+    display: none;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+    &.is-open {
+      display: block;
+    }
+  }
+}
+
+.menu-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: $title-text-color;
+
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    color: $button-link-color;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-button-icon.close {
+  display: none;
+}
+.menu-button.is-open .menu-button-icon.close {
+  display: block;
+  fill: currentColor;
+}
+.menu-button-icon.open {
+  fill: currentColor;
+
+  .menu-button.is-open & {
+    display: none;
+  }
+}
+.menu {
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+}
+
+.menu-nav {
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+}
 .menu-nav .item {
   position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  &:not(:last-child) {
-    margin-right: 50px;
+  @media (max-width: 767px) {
+    font-size: 18px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      padding-bottom: 8px;
+    }
+  }
+  @media (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 .menu .menu-link {
@@ -94,6 +179,11 @@ header .contacts {
     flex-direction: column;
     font-size: 12px;
     line-height: 1.17;
+    margin-left: 83px;
+  }
+  @media (max-width: 767px) {
+    margin-left: 0px;
+    align-items: center;
   }
 }
 .contact-item {
@@ -103,9 +193,15 @@ header .contacts {
   &:focus {
     color: $button-link-color;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1199px) {
     &:not(:last-child) {
       margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 767px) {
+    font-size: 18px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
     }
   }
 
@@ -119,24 +215,19 @@ header .contacts {
 .mail-img {
   width: 16px;
   height: 12px;
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
+  @media (min-width: 1200px) {
+    margin-right: 10px;
+  }
 }
 
 .smartphone-img {
   width: 10px;
-  height: 16px;
-  margin-right: 10px;
+  height: 14px;
+  margin-right: 8px;
   fill: currentColor;
-}
-
-.menu,
-header .contacts {
-  @media (max-width: 767px) {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
+  @media (min-width: 1200px) {
+    margin-right: 10px;
   }
 }
