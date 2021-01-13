@@ -973,6 +973,7 @@ header .contacts {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: -15px;
+  overflow: hidden;
 }
 
 .work-examples.item {
@@ -1004,6 +1005,16 @@ header .contacts {
   .work-examples.item {
     width: calc((100% - 6 * 15px) / 3);
   }
+}
+
+/* фильтр типов */
+.filterDiv {
+  float: left;
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 .work-photo {
