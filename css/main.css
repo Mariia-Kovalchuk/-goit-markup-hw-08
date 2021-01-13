@@ -1349,8 +1349,8 @@ textarea::placeholder {
 }
 
 .team-list > li > img {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 .team h3 {
