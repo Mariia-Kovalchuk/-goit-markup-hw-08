@@ -24,4 +24,7 @@
   letter-spacing: 0.06em;
   border: 0;
   color: $title-text-color2;
+  &:hover {
+    background: $button-hover-color;
+  }
 }
