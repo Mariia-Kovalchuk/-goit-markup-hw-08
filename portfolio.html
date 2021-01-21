@@ -69,26 +69,56 @@
         <div class="container">
           <h2 class="worktype-header">Примеры работ</h2>
           <!--фильтр типа работ-->
-          <ul class="worktype-filters">
+          <ul id="myBtnContainer" class="worktype-filters">
             <li class="item">
-              <button class="filter-button" type="button">Все</button>
+              <button
+                class="filter-button btn activ"
+                onclick="filterSelection('all')"
+                type="button"
+              >
+                Все
+              </button>
             </li>
             <li class="item">
-              <button class="filter-button" type="button">Веб-сайты</button>
+              <button
+                class="filter-button btn"
+                onclick="filterSelection('web')"
+                type="button"
+              >
+                Веб-сайты
+              </button>
             </li>
             <li class="item">
-              <button class="filter-button" type="button">Приложения</button>
+              <button
+                class="filter-button btn"
+                onclick="filterSelection('app')"
+                type="button"
+              >
+                Приложения
+              </button>
             </li>
             <li class="item">
-              <button class="filter-button" type="button">Дизайн</button>
+              <button
+                class="filter-button btn"
+                onclick="filterSelection('design')"
+                type="button"
+              >
+                Дизайн
+              </button>
             </li>
             <li class="item">
-              <button class="filter-button" type="button">Маркетинг</button>
+              <button
+                class="filter-button btn"
+                onclick="filterSelection('market')"
+                type="button"
+              >
+                Маркетинг
+              </button>
             </li>
           </ul>
           <!--примеры работ-->
           <ul class="work-examples">
-            <li class="work-examples item">
+            <li class="filterDiv web work-examples item">
               <a href="">
                 <div class="work-photo">
                   <picture>
@@ -162,7 +192,7 @@
                 </div>
               </a>
             </li>
-            <li class="work-examples item">
+            <li class="filterDiv design work-examples item">
               <a href="">
                 <div class="work-photo">
                   <picture>
@@ -238,7 +268,7 @@
                 </div>
               </a>
             </li>
-            <li class="work-examples item">
+            <li class="filterDiv app work-examples item">
               <a href="">
                 <div class="work-photo">
                   <picture>
@@ -313,7 +343,7 @@
                 </div>
               </a>
             </li>
-            <li class="work-examples item">
+            <li class="filterDiv market work-examples item">
               <a href="">
                 <div class="work-photo">
                   <picture>
@@ -388,7 +418,7 @@
                 </div>
               </a>
             </li>
-            <li class="work-examples item">
+            <li class="filterDiv app work-examples item">
               <a href="">
                 <div class="work-photo">
                   <picture>
@@ -463,7 +493,7 @@
                 </div>
               </a>
             </li>
-            <li class="work-examples item">
+            <li class="filterDiv web work-examples item">
               <a href="">
                 <div class="work-photo">
                   <picture>
@@ -539,7 +569,7 @@
                 </div>
               </a>
             </li>
-            <li class="work-examples item">
+            <li class="filterDiv design work-examples item">
               <a href="">
                 <div class="work-photo">
                   <picture>
@@ -614,7 +644,7 @@
                 </div>
               </a>
             </li>
-            <li class="work-examples item">
+            <li class="filterDiv market work-examples item">
               <a href="">
                 <div class="work-photo">
                   <picture>
@@ -689,7 +719,7 @@
                 </div>
               </a>
             </li>
-            <li class="work-examples item">
+            <li class="filterDiv app work-examples item">
               <a href="">
                 <div class="work-photo">
                   <picture>
@@ -839,5 +869,6 @@
       </div>
     </footer>
     <script src="./js/menu.js"></script>
+    <script src="./js/filter.js"></script>
   </body>
 </html>
