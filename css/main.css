@@ -1057,10 +1057,10 @@ header .contacts {
 
 .modal {
   position: absolute;
-  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
+  top: 89px;
+  -webkit-transform: translate(-50%) scale(1);
+          transform: translate(-50%) scale(1);
   opacity: 1;
   z-index: 4;
   width: calc(100% - 2 * 15px);
@@ -1085,6 +1085,14 @@ header .contacts {
     width: 450px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
   }
 }
 
